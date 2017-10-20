@@ -35,12 +35,29 @@ public class Company {
 
     public void show() {
         for (Employee manager : managers) {
-            System.out.println(manager.toString());
+            if(manager != null) {
+                System.out.println(manager.toString());
+            }
         }
         for (Employee worker : workers) {
-            System.out.println(worker.toString());
+            if(worker != null) {
+                System.out.println(worker.toString());
+            }
         }
+    }
 
-
+    private int minSalary(){
+        int minSalary = Integer.MAX_VALUE;
+        for (Employee worker : workers) {
+             if(worker.getSalary() < minSalary){
+                 minSalary = worker.getSalary();
+             }
+        }
+        for (Employee manager : managers) {
+            if(manager.getSalary() < minSalary){
+                minSalary = manager.getSalary();
+            }
+        }
+        return minSalary;
     }
 }
