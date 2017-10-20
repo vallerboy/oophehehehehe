@@ -16,4 +16,12 @@ public class Worker extends Employee {
     protected void work() {
         System.out.println("ZBIERAM CZEKOLADE Z TASMY");
     }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public void setHappiness(int happiness) {
+        this.happiness = happiness;
+    }
 }
