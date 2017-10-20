@@ -40,7 +40,7 @@ public class Company {
         for (Employee worker : workers) {
             System.out.println(worker.toString());
         }
-        
+
 
     }
 }
