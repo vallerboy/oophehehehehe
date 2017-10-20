@@ -7,8 +7,15 @@ public class Main {
         Car car = new Car("Ford", 1200, "Focus");
         car.show();
 
-        Car car1 = new Car("Nissan", 110000, "Qasqaui");
-        car1.setPrice(50000);
+        Car car1 = new Car("Ford", 1200, "Focus");
         car1.show();
+
+        System.out.println(car);
+
+        if(car.equals(car1)){
+            System.out.println("Sa takie same");
+        }else{
+            System.out.println("nie sa");
+        }
     }
 }
