@@ -7,6 +7,8 @@ public class BoxApp {
         BoxApp app = new BoxApp();
         app.start();
         app.printBoxes();
+        System.out.println(app.joinDiagonal());
+        System.out.println(app.joinHorizontally());
     }
 
     private Scanner scanner;
@@ -48,4 +50,17 @@ public class BoxApp {
         }
         return new Box(width, height);
     }
+
+    private Box joinHorizontally(){
+        int width = 0, maxHeight = 0;
+        for (Box box : boxes) {
+            width += box.getWidth();
+            if(maxHeight < box.getHeight()){
+                maxHeight = box.getHeight();
+            }
+        }
+        return new Box(width, maxHeight);
+    }
+
+
 }
