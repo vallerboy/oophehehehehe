@@ -13,5 +13,8 @@ public class GameStarter {
         RPG.addPlayer(leopoldia);
 
         RPG.checkGameWinner();
+
+
+        Game.getAllPeople(RPG.getPlayers());
     }
 }

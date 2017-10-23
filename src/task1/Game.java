@@ -32,4 +32,14 @@ public class Game {
             System.out.println(playerWithMaxPoints.fullName());
         }
     }
+
+    public Player[] getPlayers() {
+        return players;
+    }
+
+    public static void getAllPeople(Player[] players){
+        for (Player player : players) {
+            System.out.println(player.fullName());
+        }
+    }
 }

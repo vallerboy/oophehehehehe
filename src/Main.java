@@ -17,5 +17,9 @@ public class Main {
         }else{
             System.out.println("nie sa");
         }
+
+
+        System.out.println();
+
     }
 }

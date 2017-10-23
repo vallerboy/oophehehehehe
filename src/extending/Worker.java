@@ -18,10 +18,16 @@ public class Worker extends Employee {
     }
 
     public int getHappiness() {
+
         return happiness;
     }
 
     public void setHappiness(int happiness) {
         this.happiness = happiness;
+    }
+
+    @Override
+    public void askAboutSalary() {
+        System.out.println("Daj 5 zl");
     }
 }
