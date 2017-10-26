@@ -9,6 +9,7 @@ public class BoxApp {
         app.printBoxes();
         System.out.println(app.joinDiagonal());
         System.out.println(app.joinHorizontally());
+
     }
 
     private Scanner scanner;
