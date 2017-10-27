@@ -12,11 +12,22 @@ public class Main {
         List<Integer> byteList = new ArrayList<>();
 
         try {
-            
-            FileInputStream inputStreamReader = new FileInputStream(file);
+
+            InputStreamReader inputStreamReader =
+                    new InputStreamReader(new FileInputStream(file));
+
+            FileInputStream inputStreamReader1 = new FileInputStream(file);
             int i;
+            int x;
             while ((i = inputStreamReader.read()) != -1){
-                byteList.add(i);
+                System.out.print(i + " ");
+            }
+
+            System.out.println("\n");
+            System.out.println("-----------------------------------");
+
+            while ((x = inputStreamReader1.read()) != -1){
+                System.out.print(x + " ");
             }
 
 
