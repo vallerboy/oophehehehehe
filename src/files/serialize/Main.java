@@ -15,7 +15,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        
+
         try {
             ObjectOutputStream objectOutputStream =
                     new ObjectOutputStream(new FileOutputStream(file));
@@ -24,5 +24,16 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            ObjectInputStream objectInputStream =
+                    new ObjectInputStream(new FileInputStream(file));
+
+            Person personRead = (Person) objectInputStream.readObject();
+            System.out.println("Imie: " + personRead.getName());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }
